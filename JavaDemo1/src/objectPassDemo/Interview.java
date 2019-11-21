@@ -16,7 +16,7 @@ public class Interview {
 	
 	public void getDetails() {
 		Scanner in = new Scanner(System.in);
-		System.out.print("Enter Candidate Name  				  : ");
+		System.out.print("Enter Candidate Name  				: ");
 		cname = in.nextLine();
 		System.out.print("Enter Candidate Id                    : ");
 		cid = in.nextLine();
@@ -51,7 +51,7 @@ public class Interview {
 			default:
 				System.out.println("Invalid Entry...");
 		}
-		in.close();
+		
 	}
 	
 	public void putDeatails() {
@@ -60,11 +60,13 @@ public class Interview {
 		System.out.println("Candidate Qualification.........: "+ qualification);
 		System.out.println("Candidate Year of Qualification.: "+ year);
 		System.out.println("Interview Day.............: "+ MeetingDate);
+		System.out.println();
 	}
 	public static void main(String [] args) {
 		
 		Interview ad[] = new Interview[5];
 		for(int i=0;i<ad.length;i++) {
+			ad[i] = new Interview();
 			ad[i].getDetails();
 		}
 
